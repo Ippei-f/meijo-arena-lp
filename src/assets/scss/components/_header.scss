@@ -1,0 +1,301 @@
+@charset "UTF-8";
+
+.l-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	background: rgba($color: $blue, $alpha: 0);
+	transition: $transition;
+
+	@include mq(sm2) {
+		position: absolute;
+	}
+
+	&-inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		padding: 20px 5vw;
+
+		@include mq(sm2) {
+			padding: 23px 5vw;
+		}
+	}
+	&__logo {
+		width: 289px;
+		position: relative;
+		z-index: 1;
+		margin: 0;
+		transition: $transition;
+
+		@include mq(sm2) {
+			width: 144px;
+		}
+	}
+
+	&.fixed {
+		background: rgba($color: $blue, $alpha: 0.9);
+
+		.l-header-inner {
+			padding: 13px 5vw;
+		}
+		.l-header__logo {
+			width: 200px;
+		}
+	}
+}
+
+.gnav {
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+
+		@include mq(sm2) {
+			display: block;
+		}
+	}
+	&__item {
+		@include mq(sm2) {
+			border-bottom: 1px solid #fff;
+		}
+
+		a {
+			color: #fff;
+			font-family: $font-a;
+			font-size: 15px;
+			display: block;
+
+			@include mq(sm2) {
+				padding: 10px;
+			}
+		}
+		&.contact {
+			margin-top: 0px;
+
+			@include mq(sm2) {
+				margin-top: 40px;
+				border: none;
+			}
+
+			a {
+				width: 180px;
+				height: 44px;
+				min-width: auto;
+				display: inline-flex;
+				justify-content: center;
+				padding: 0;
+				font-weight: 500;
+
+				@include mq(sm2) {
+					width: 100%;
+					height: 60px;
+				}
+
+				&:after {
+					font-size: 15px;
+					right: 15px;
+				}
+			}
+		}
+		&.has-second {
+			position: relative;
+
+			> a {
+				@include mq(sm2) {
+					display: none;
+				}
+			}
+		}
+		.second {
+			position: absolute;
+			top: 27px;
+			left: 50%;
+			transform: translate(-50%, 0);
+			z-index: 2;
+			padding-top: 15px;
+			transition: $transition;
+			opacity: 0;
+			visibility: hidden;
+			min-width: 153px;
+
+			@include mq(sm2) {
+				position: static;
+				opacity: 1;
+				visibility: visible;
+				transform: translate(0, 0);
+				padding: 0;
+			}
+
+			&-inner {
+				background: rgba($color: $blue, $alpha: 0.9);
+				display: flex;
+				justify-content: center;
+				padding: 8px 14px;
+
+				@include mq(sm2) {
+					background: none;
+					padding: 0;
+					display: block;
+				}
+			}
+
+			&__list {
+				margin: 0;
+			}
+
+			&__item {
+				white-space: nowrap;
+				border-bottom: 1px solid #fff;
+				font-weight: 500;
+
+				@include mq(sm2) {
+					border: none;
+					border-bottom: 1px solid #fff;
+				}
+
+				&:last-child {
+					border-bottom: none;
+				}
+
+				a {
+					color: #fff;
+					display: block;
+					height: 100%;
+					font-weight: bold;
+					padding: 7px 10px;
+					font-size: 14px;
+
+					@include mq(sm2) {
+						padding: 10px;
+						font-size: 15px;
+						font-weight: 400;
+					}
+
+					&:hover {
+					}
+				}
+			}
+		}
+		&.active {
+			.second {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}
+
+@include mq(sm2) {
+	// ハンバーガー
+	#hamburger {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		z-index: 35;
+		top: 16px;
+		right: 16px;
+		width: 45px;
+		height: 45px;
+		background: $blue;
+		cursor: pointer;
+		transition: 1s;
+		padding: 13px 10px;
+
+		.inner {
+			position: relative;
+			width: 100%;
+			height: 100%;
+
+			.inner_line {
+				display: block;
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				transition: 0.4s;
+				background: #fff;
+
+				&#line1 {
+					top: 0;
+
+					&.active {
+						transform: translateY(9px) rotate(-45deg);
+					}
+				}
+
+				&#line2 {
+					top: 50%;
+					transform: translate(0, -50%);
+
+					&.active {
+						opacity: 0;
+					}
+				}
+				&#line3 {
+					bottom: 0;
+
+					&.active {
+						transform: translateY(-8px) rotate(45deg);
+					}
+				}
+			}
+		}
+		&.active {
+			background: none;
+		}
+	}
+	#hamburger-menu {
+		position: fixed;
+		background-size: cover;
+		width: 100%;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-size: cover;
+		transition: 0.7s;
+		z-index: 11;
+		background: $blue;
+		opacity: 0;
+		display: none;
+		&.active {
+			display: block;
+			opacity: 1;
+			animation: fadeIn 0.3s ease-in 0s forwards;
+		}
+		.hamburger-menu-inner {
+			overflow: auto;
+			height: 100vh;
+			display: block;
+			padding: 80px 30px 110px;
+
+			.fnav {
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	1% {
+		display: block;
+		opacity: 0;
+	}
+
+	100% {
+		display: block;
+		opacity: 1;
+	}
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<script>
+			// ユーザーエージェント
+			var ua = navigator.userAgent.toLowerCase();
+			var ver = navigator.appVersion.toLowerCase();
+			var uaList = {};
+			uaList["isiPhone"] = ua.indexOf("iphone") > -1 && ua.indexOf("ipad") == -1;
+			uaList["isiPad"] = ua.indexOf("ipad") > -1;
+			uaList["isAndroid"] = ua.indexOf("android") > -1 && ua.indexOf("mobile") > -1;
+			uaList["isAndroidTablet"] = ua.indexOf("android") > -1 && ua.indexOf("mobile") == -1;
+			uaList["isTablet"] = uaList["isiPad"] || uaList["isAndroidTablet"];
+			uaList["isSP"] = uaList["isiPhone"] || uaList["isAndroid"];
+
+			// viewportの設定
+			var viewport = document.createElement("meta");
+			viewport.setAttribute("name", "viewport");
+			if (uaList["isSP"]) {
+				viewport.setAttribute("content", "width=device-width, initial-scale=1.0");
+			} else {
+				viewport.setAttribute("content", "width=1260");
+			}
+			document.getElementsByTagName("head")[0].appendChild(viewport);
+		</script>
+
+		<title>名城大学 開学100周年記念アリーナ完成記念</title>
+
+		<link rel="icon" type="image/png" href="assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="assets/images/favicon/favicon.svg" />
+		<link rel="shortcut icon" href="assets/images/favicon/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
+		<link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="assets/css/destyle.css" />
+		<link rel="stylesheet" href="assets/css/index.css" />
+		<!-- CSS -->
+
+		<!--font-->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+	</head>
+
+	<body>
+		<header class="l-header">
+			<div class="l-header-inner">
+				<h1 class="l-header__logo">
+					<a href="">
+						<img src="assets/images/common/logo.svg" alt="" />
+					</a>
+				</h1>
+				<div id="hamburger" class="sp-only">
+					<div class="inner">
+						<span class="inner_line" id="line1"></span>
+						<span class="inner_line" id="line2"></span>
+						<span class="inner_line" id="line3"></span>
+					</div>
+				</div>
+				<div id="hamburger-menu">
+					<div class="hamburger-menu-inner">
+						<nav class="gnav">
+							<ul class="gnav__list">
+								<li class="gnav__item">
+									<a href="">ホーム</a>
+								</li>
+								<li class="gnav__item">
+									<a href="">採用情報</a>
+								</li>
+								<li class="gnav__item">
+									<a href="">お知らせ</a>
+								</li>
+								<li class="gnav__item contact c-btn white">
+									<a href="">
+										<span class="label">CONTACT</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<script src="assets/js/libs/jquery-3.6.0.min.js"></script>
+		<script src="assets/js/libs/ofi.min.js"></script>
+		<script src="assets/js/common.js"></script>
+		<!-- /基本JS -->
+
+		<link rel="stylesheet" type="text/css" href="assets/css/libs/slick.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/libs/slick-theme.css" />
+		<script type="text/javascript" src="assets/js/libs/slick.min.js"></script>
+
+		<script>
+			$(".xxx__list").slick({
+				autoplay: true,
+				adaptiveHeight: true,
+				centerMode: true,
+				centerPadding: "20%",
+				dots: true,
+				responsive: [
+					{
+						breakpoint: 768, // 767px以下のサイズに適用
+						settings: {
+							centerMode: false,
+						},
+					},
+				],
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+.pagination {
+	line-height: 1;
+	font-size: 20px;
+
+	.wp-pagenavi {
+		padding-top: 48px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 10px;
+		.page,
+		.current {
+			font-family: $font-a;
+			background: #e6e6e6;
+			color: $green;
+			font-weight: 500;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.current {
+			background: $green;
+			color: #fff;
+		}
+		.nextpostslink,
+		.last,
+		.previouspostslink,
+		.first {
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&:before {
+				font-size: 11px;
+				position: relative;
+			}
+		}
+		.nextpostslink {
+			margin-left: 20px;
+
+			@include mq(sm2) {
+				margin-left: 0;
+			}
+
+			&:before {
+				content: url(../images/pagination/right.svg);
+			}
+		}
+		.last {
+			&:before {
+				content: url(../images/pagination/right2.svg);
+			}
+		}
+		.previouspostslink {
+			margin-right: 20px;
+
+			@include mq(sm2) {
+				margin-right: 0;
+			}
+
+			&:before {
+				content: url(../images/pagination/left.svg);
+			}
+		}
+		.first {
+			&:before {
+				content: url(../images/pagination/left2.svg);
+			}
+		}
+	}
+}

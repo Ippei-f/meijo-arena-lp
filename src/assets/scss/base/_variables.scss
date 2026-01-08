@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/* -------------------
+
+
+  ！！！！！注意！！！！！
+
+  index.cssはSassから生成されていますので、
+  直接編集しないようご注意ください
+
+  ！！！！！注意！！！！！
+
+
+  
+--------------------*/
+
+/* -------------------
+  VARIABLES
+--------------------*/
+
+// Color
+$lrpd: calc((100vw - 970px) / 2);
+$ls1: 0.1em;
+$ls2: 0.2em;
+$font-color: #191919;
+$orange: #000;
+$green: #000;
+$blue: #004ba0;
+$red: #ff2400;
+$yellow: #ffc000;
+$bg-color: #e6edf4;
+$transition: all 0.3s ease 0s;
+$sp-padding: 20px;
+$tb-padding: 10vw;
+$box-shadow: 0px 3px 6px
+	rgba(
+		$color: #000000,
+		$alpha: 0.16,
+	);
+
+// Font Family
+$font-base: "Noto Sans JP", serif;
+$font-a: "Oswald", "Noto Sans JP", serif;
+$font-b: "Oswald", "Noto Sans JP", serif;
+$font-c: "Oswald", "Noto Sans JP", serif;
+
+.font-a {
+	font-family: $font-a;
+}
+.font-b {
+	font-family: $font-b;
+	font-style: normal;
+}
+
+// <weight>: Use a value from 100 to 900
+.noto-sans-jp {
+	font-family: "Noto Sans JP", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+// <weight>: Use a value from 200 to 700
+
+.oswald {
+	font-family: "Oswald", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
