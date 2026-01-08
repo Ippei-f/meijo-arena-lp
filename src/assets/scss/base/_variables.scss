@@ -22,13 +22,13 @@
 $lrpd: calc((100vw - 970px) / 2);
 $ls1: 0.1em;
 $ls2: 0.2em;
-$font-color: #191919;
-$orange: #000;
+$font-color: #000;
+$orange: #ff931e;
 $green: #000;
-$blue: #004ba0;
-$red: #ff2400;
-$yellow: #ffc000;
-$bg-color: #e6edf4;
+$blue: #005d8b;
+$red: #a11d3a;
+$yellow: #fff000;
+$bg-color: #000;
 $transition: all 0.3s ease 0s;
 $sp-padding: 20px;
 $tb-padding: 10vw;
@@ -40,9 +40,9 @@ $box-shadow: 0px 3px 6px
 
 // Font Family
 $font-base: "Noto Sans JP", serif;
-$font-a: "Oswald", "Noto Sans JP", serif;
-$font-b: "Oswald", "Noto Sans JP", serif;
-$font-c: "Oswald", "Noto Sans JP", serif;
+$font-a: "din-2014", "Noto Sans JP", serif;
+$font-b: "Noto Sans JP", serif;
+$font-c: "Noto Sans JP", serif;
 
 .font-a {
 	font-family: $font-a;
@@ -59,10 +59,26 @@ $font-c: "Oswald", "Noto Sans JP", serif;
 	font-style: normal;
 }
 
-// <weight>: Use a value from 200 to 700
-
-.oswald {
-	font-family: "Oswald", sans-serif;
-	font-optical-sizing: auto;
+.DIN-2014-Regular {
+	font-family: "din-2014", sans-serif;
+	font-weight: 400;
 	font-style: normal;
+}
+
+.DIN-2014-Italic {
+	font-family: "din-2014", sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+.DIN-2014-Bold {
+	font-family: "din-2014", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.DIN-2014-Bold-Italic {
+	font-family: "din-2014", sans-serif;
+	font-weight: 700;
+	font-style: italic;
 }
