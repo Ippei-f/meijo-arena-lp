@@ -18,7 +18,7 @@ body {
 	letter-spacing: 0.05em;
 
 	@include mq(sm2) {
-		font-size: 14px;
+		font-size: 13px;
 	}
 
 	&.noscroll {
