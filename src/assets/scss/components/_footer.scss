@@ -4,15 +4,27 @@
 	text-align: center;
 	padding-bottom: 150px;
 
+	@include mq(sm2) {
+		padding-bottom: 40px;
+	}
+
 	&__logo {
 		margin-bottom: 20px;
 		img {
 			width: 230px;
+
+			@include mq(sm2) {
+				width: vw2(230);
+			}
 		}
 	}
 	&__sitepolicy {
 		font-size: 16px;
 		margin-bottom: 30px;
+
+		@include mq(sm2) {
+			font-size: vw2(18);
+		}
 	}
 	&__sns {
 		margin-bottom: 20px;
@@ -22,34 +34,68 @@
 			align-items: center;
 			gap: 30px;
 
+			@include mq(sm2) {
+				gap: 18px;
+			}
+
 			li {
+				a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+
 				img {
 					width: 60px;
+
+					@include mq(sm2) {
+						width: vw2(60);
+					}
 				}
 
 				&.youtube {
 					img {
 						width: 60px;
+
+						@include mq(sm2) {
+							width: vw2(60);
+						}
 					}
 				}
 				&.line {
 					img {
 						width: 53px;
+
+						@include mq(sm2) {
+							width: vw2(53);
+						}
 					}
 				}
 				&.instagram {
 					img {
 						width: 53px;
+
+						@include mq(sm2) {
+							width: vw2(53);
+						}
 					}
 				}
 				&.facebook {
 					img {
 						width: 53px;
+
+						@include mq(sm2) {
+							width: vw2(53);
+						}
 					}
 				}
 				&.x {
 					img {
 						width: 46px;
+
+						@include mq(sm2) {
+							width: vw2(46);
+						}
 					}
 				}
 			}
@@ -57,6 +103,10 @@
 	}
 	.copyright {
 		font-size: 14px;
+
+		@include mq(sm2) {
+			font-size: vw2(17);
+		}
 	}
 }
 
@@ -71,14 +121,22 @@
 	bottom: 0;
 
 	@include mq(sm2) {
-		display: none;
+		padding: 16px 0;
 	}
 
 	&__txt {
 		font-size: 28px;
+
+		@include mq(sm2) {
+			font-size: vw2(28);
+		}
 	}
 	&__btn {
 		font-size: 40px;
+
+		@include mq(sm2) {
+			font-size: vw2(40);
+		}
 		a {
 			background: #fff;
 			border-radius: 20px;
@@ -88,6 +146,12 @@
 			align-items: center;
 			width: 640px;
 			height: 70px;
+
+			@include mq(sm2) {
+				border-radius: 10px;
+				width: vw2(549);
+				height: vw2(70);
+			}
 		}
 	}
 }
