@@ -4685,14 +4685,14 @@ body .slick-dots {
     margin: 30px 0 35px; }
 
 .arena-kv {
-  background: url(../images/kv-bg.jpg) no-repeat center/100% auto;
+  background: url(../images/kv-bg.jpg) no-repeat center/cover;
   width: 100%;
   height: auto;
   aspect-ratio: 2881 / 2735;
   position: relative; }
   @media screen and (max-width: 767px) {
     .arena-kv {
-      background: url(../images/sp/kv-bg.jpg) no-repeat center/100% auto;
+      background: url(../images/sp/kv-bg.jpg) no-repeat center/cover;
       aspect-ratio: 650/828; } }
   .arena-kv__catch {
     width: 100%;
@@ -4708,7 +4708,7 @@ body .slick-dots {
 
 /* --------------------------- */
 .arena-info {
-  background: url(../images/info-bg.jpg) no-repeat center/100% auto;
+  background: url(../images/info-bg.jpg) no-repeat center/cover;
   padding: 300px 0 0; }
   @media screen and (max-width: 767px) {
     .arena-info {
@@ -4833,11 +4833,14 @@ body .slick-dots {
     font-size: 56px;
     text-align: center;
     font-weight: 700;
-    border-radius: 50px 50px 0 0; }
+    border-radius: 50px 50px 0 0;
+    margin: 0;
+    padding: 20px; }
     @media screen and (max-width: 767px) {
       .arena-event-header {
         font-size: 8.61538vw;
-        border-radius: 30px 30px 0 0; } }
+        border-radius: 30px 30px 0 0;
+        padding: 10px; } }
   .arena-event-cnt {
     padding: 60px;
     border: 5px solid #ff931e;
@@ -4913,7 +4916,7 @@ body .slick-dots {
         flex-direction: column;
         align-items: center;
         border-radius: 30px 30px 0 0;
-        padding: 17px 4vw 20px; } }
+        padding: 10px 4vw 20px; } }
     .arena-program-header .floor {
       font-size: 32px;
       background: #fff;
@@ -4935,19 +4938,23 @@ body .slick-dots {
         @media screen and (max-width: 767px) {
           .arena-program-header .floor .number {
             font-size: 7.23077vw; } }
-    .arena-program-header .txt .en {
-      font-size: 56px;
-      display: block; }
-      @media screen and (max-width: 767px) {
-        .arena-program-header .txt .en {
-          font-size: 7.38462vw;
-          margin-bottom: 10px; } }
-    .arena-program-header .txt .jp {
-      font-size: 32px;
-      display: block; }
-      @media screen and (max-width: 767px) {
-        .arena-program-header .txt .jp {
-          font-size: 3.69231vw; } }
+    .arena-program-header .txt {
+      margin: 0; }
+      .arena-program-header .txt .en {
+        font-size: 56px;
+        display: block;
+        line-height: 1.3; }
+        @media screen and (max-width: 767px) {
+          .arena-program-header .txt .en {
+            font-size: 7.38462vw;
+            margin-bottom: 10px; } }
+      .arena-program-header .txt .jp {
+        font-size: 32px;
+        display: block;
+        line-height: 1.3; }
+        @media screen and (max-width: 767px) {
+          .arena-program-header .txt .jp {
+            font-size: 3.69231vw; } }
   .arena-program-cnt {
     padding: 60px;
     padding-left: 90px;
@@ -5199,18 +5206,32 @@ body .slick-dots {
   .arena-schedule-header {
     background: #39b54a;
     color: #fff;
-    font-size: 56px;
     text-align: center;
     font-weight: 700;
-    border-radius: 50px 50px 0 0; }
+    border-radius: 50px 50px 0 0;
+    line-height: 1.3;
+    padding: 17px 0 20px;
+    margin: 0; }
     @media screen and (max-width: 767px) {
       .arena-schedule-header {
         border-radius: 30px 30px 0 0;
-        font-size: 8.61538vw;
-        line-height: 1.3;
-        padding: 15px 0; } }
+        padding: 20px 4vw 20px; } }
+    .arena-schedule-header .en {
+      font-size: 56px;
+      display: block; }
+      @media screen and (max-width: 767px) {
+        .arena-schedule-header .en {
+          font-size: 7.38462vw;
+          line-height: 1;
+          margin-bottom: 10px; } }
+    .arena-schedule-header .jp {
+      font-size: 32px;
+      display: block; }
+      @media screen and (max-width: 767px) {
+        .arena-schedule-header .jp {
+          font-size: 3.69231vw; } }
   .arena-schedule-cnt {
-    padding: 60px;
+    padding: 60px 40px;
     border-radius: 0 0 50px 50px;
     border: 5px solid #39b54a; }
     @media screen and (max-width: 767px) {
@@ -5244,6 +5265,82 @@ body .slick-dots {
         @media screen and (max-width: 767px) {
           .arena-schedule-cnt .comingsoon .line-2 {
             font-size: 6.15385vw; } }
+  .arena-schedule__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; }
+  .arena-schedule__item {
+    width: calc((100% - 60px) / 3); }
+    @media screen and (max-width: 767px) {
+      .arena-schedule__item {
+        width: 100%; } }
+    .arena-schedule__item-header {
+      background: #39b54a;
+      color: #fff;
+      margin: 0;
+      border-radius: 20px 20px 0 0;
+      text-align: center;
+      min-height: 92px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      line-height: 1.21;
+      letter-spacing: 0; }
+      @media screen and (max-width: 767px) {
+        .arena-schedule__item-header {
+          font-size: 4.30769vw;
+          line-height: 1.4;
+          min-height: auto;
+          padding: 10px 0; } }
+      .arena-schedule__item-header .xs08 {
+        width: calc(100% / 0.8);
+        transform: scale(0.8, 1); }
+      .arena-schedule__item-header .xs085 {
+        width: calc(100% / 0.85);
+        transform: scale(0.85, 1); }
+      .arena-schedule__item-header .xs09 {
+        width: calc(100% / 0.9);
+        transform: scale(0.9, 1); }
+      .arena-schedule__item-header .fs24 {
+        font-size: 24px; }
+        @media screen and (max-width: 767px) {
+          .arena-schedule__item-header .fs24 {
+            font-size: 3.69231vw; } }
+    .arena-schedule__item-img {
+      margin-bottom: 15px; }
+      @media screen and (max-width: 767px) {
+        .arena-schedule__item-img {
+          margin-bottom: 10px; } }
+      .arena-schedule__item-img img {
+        width: 100%; }
+    .arena-schedule__item-cont .ttl {
+      color: #39b54a;
+      text-align: center;
+      font-size: 20px;
+      line-height: 1.25;
+      margin-bottom: 18px;
+      letter-spacing: 0; }
+      @media screen and (max-width: 767px) {
+        .arena-schedule__item-cont .ttl {
+          font-size: 3.07692vw;
+          margin-bottom: 10px; } }
+    @media screen and (max-width: 767px) {
+      .arena-schedule__item-cont .unit {
+        font-size: 2.76923vw; } }
+    .arena-schedule__item-cont .unit h6 {
+      background-color: #39b54a;
+      color: #fff;
+      text-align: center;
+      border-radius: 100vh;
+      padding: 2px; }
+    .arena-schedule__item-cont .unit .body {
+      line-height: 1.39; }
+      .arena-schedule__item-cont .unit .body p {
+        margin-bottom: 1.5em; }
+      .arena-schedule__item-cont .unit .body.ta-center {
+        text-align: center; }
 
 /* --------------------------- */
 .arena-kidsevent {
@@ -5261,7 +5358,7 @@ body .slick-dots {
       position: absolute;
       width: 173px;
       right: 40px;
-      top: -326px; }
+      top: -400px; }
       @media screen and (max-width: 767px) {
         .arena-kidsevent-inner .abillust {
           width: 16.92308vw;
