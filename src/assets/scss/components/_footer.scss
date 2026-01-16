@@ -25,6 +25,10 @@
 		@include mq(sm2) {
 			font-size: vw2(18);
 		}
+
+		a {
+			text-decoration: underline;
+		}
 	}
 	&__sns {
 		margin-bottom: 20px;
@@ -119,9 +123,11 @@
 	width: 100%;
 	left: 0;
 	bottom: 0;
+	border-top: 5px solid #fff;
 
 	@include mq(sm2) {
 		padding: 16px 0;
+		border-top: 3px solid #fff;
 	}
 
 	&__txt {

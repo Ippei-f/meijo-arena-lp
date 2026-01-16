@@ -796,7 +796,7 @@
 			letter-spacing: 0;
 
 			@include mq(sm2) {
-				font-size: vw2(28);
+				font-size: vw2(36);
 				line-height: 1.4;
 				min-height: auto;
 				padding: 10px 0;
@@ -805,6 +805,11 @@
 			.xs08 {
 				width: calc(100% / 0.8);
 				transform: scale(0.8, 1);
+
+				@include mq(sm2) {
+					width: calc(100% / 0.85);
+					transform: scale(0.85, 1);
+				}
 			}
 			.xs085 {
 				width: calc(100% / 0.85);
@@ -818,7 +823,7 @@
 				font-size: 24px;
 
 				@include mq(sm2) {
-					font-size: vw2(24);
+					font-size: vw2(28.8);
 				}
 			}
 		}
@@ -841,15 +846,19 @@
 				line-height: 1.25;
 				margin-bottom: 18px;
 				letter-spacing: 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
 
 				@include mq(sm2) {
-					font-size: vw2(20);
+					font-size: vw2(27);
 					margin-bottom: 10px;
 				}
 			}
 			.unit {
 				@include mq(sm2) {
-					font-size: vw2(18);
+					font-size: vw2(24);
 				}
 				h6 {
 					background-color: $green;
@@ -865,6 +874,13 @@
 					}
 					&.ta-center {
 						text-align: center;
+					}
+					small {
+						font-size: 17px;
+
+						@include mq(sm2) {
+							font-size: vw2(23);
+						}
 					}
 				}
 			}
@@ -1055,7 +1071,7 @@
 			@include mq(sm2) {
 				width: vw2(132);
 				right: 0;
-				top: -112px;
+				top: -31vw;
 			}
 		}
 	}

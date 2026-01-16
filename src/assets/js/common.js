@@ -57,13 +57,9 @@ jQuery(function ($) {
 	};
 
 	var matchHeight = function () {
-		var $elem01 = $(".js-favoriteCnt");
-		var $elem02 = $(".job-benefit__item .ttl");
+		var $elem01 = $(".matchHeight");
 		if ($elem01.length) {
 			$elem01.matchHeight();
-		}
-		if ($elem02.length) {
-			$elem02.matchHeight();
 		}
 	};
 

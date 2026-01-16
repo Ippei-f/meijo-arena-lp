@@ -4531,6 +4531,8 @@ body .slick-dots {
     @media screen and (max-width: 767px) {
       .l-footer__sitepolicy {
         font-size: 2.76923vw; } }
+    .l-footer__sitepolicy a {
+      text-decoration: underline; }
   .l-footer__sns {
     margin-bottom: 20px; }
     .l-footer__sns ul {
@@ -4589,10 +4591,12 @@ body .slick-dots {
   position: sticky;
   width: 100%;
   left: 0;
-  bottom: 0; }
+  bottom: 0;
+  border-top: 5px solid #fff; }
   @media screen and (max-width: 767px) {
     .foot-btn {
-      padding: 16px 0; } }
+      padding: 16px 0;
+      border-top: 3px solid #fff; } }
   .foot-btn__txt {
     font-size: 28px; }
     @media screen and (max-width: 767px) {
@@ -5290,13 +5294,17 @@ body .slick-dots {
       letter-spacing: 0; }
       @media screen and (max-width: 767px) {
         .arena-schedule__item-header {
-          font-size: 4.30769vw;
+          font-size: 5.53846vw;
           line-height: 1.4;
           min-height: auto;
           padding: 10px 0; } }
       .arena-schedule__item-header .xs08 {
         width: calc(100% / 0.8);
         transform: scale(0.8, 1); }
+        @media screen and (max-width: 767px) {
+          .arena-schedule__item-header .xs08 {
+            width: calc(100% / 0.85);
+            transform: scale(0.85, 1); } }
       .arena-schedule__item-header .xs085 {
         width: calc(100% / 0.85);
         transform: scale(0.85, 1); }
@@ -5307,7 +5315,7 @@ body .slick-dots {
         font-size: 24px; }
         @media screen and (max-width: 767px) {
           .arena-schedule__item-header .fs24 {
-            font-size: 3.69231vw; } }
+            font-size: 4.43077vw; } }
     .arena-schedule__item-img {
       margin-bottom: 15px; }
       @media screen and (max-width: 767px) {
@@ -5321,14 +5329,18 @@ body .slick-dots {
       font-size: 20px;
       line-height: 1.25;
       margin-bottom: 18px;
-      letter-spacing: 0; }
+      letter-spacing: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
       @media screen and (max-width: 767px) {
         .arena-schedule__item-cont .ttl {
-          font-size: 3.07692vw;
+          font-size: 4.15385vw;
           margin-bottom: 10px; } }
     @media screen and (max-width: 767px) {
       .arena-schedule__item-cont .unit {
-        font-size: 2.76923vw; } }
+        font-size: 3.69231vw; } }
     .arena-schedule__item-cont .unit h6 {
       background-color: #39b54a;
       color: #fff;
@@ -5341,6 +5353,11 @@ body .slick-dots {
         margin-bottom: 1.5em; }
       .arena-schedule__item-cont .unit .body.ta-center {
         text-align: center; }
+      .arena-schedule__item-cont .unit .body small {
+        font-size: 17px; }
+        @media screen and (max-width: 767px) {
+          .arena-schedule__item-cont .unit .body small {
+            font-size: 3.53846vw; } }
 
 /* --------------------------- */
 .arena-kidsevent {
@@ -5472,7 +5489,7 @@ body .slick-dots {
         .arena-access-inner .abillust {
           width: 20.30769vw;
           right: 0;
-          top: -112px; } }
+          top: -31vw; } }
   .arena-access__ttl {
     display: flex;
     justify-content: center;
