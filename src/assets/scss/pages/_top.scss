@@ -4,12 +4,12 @@
 	background: url(../images/kv-bg.jpg) no-repeat center / cover;
 	width: 100%;
 	height: auto;
-	aspect-ratio: 2881 / 2735;
+	aspect-ratio: 2881 / 2716;
 	position: relative;
 
 	@include mq(sm2) {
 		background: url(../images/sp/kv-bg.jpg) no-repeat center / cover;
-		aspect-ratio: 650/828;
+		aspect-ratio: 650/799;
 	}
 
 	&__catch {
@@ -776,6 +776,10 @@
 	&__item {
 		width: calc((100% - 60px) / 3);
 
+		@media (min-width: 768px) and (max-width: 1300px) {
+			width: calc((100% - 30px) / 2);
+		}
+
 		@include mq(sm2) {
 			width: 100%;
 		}
@@ -794,6 +798,10 @@
 			font-size: 28px;
 			line-height: 1.21;
 			letter-spacing: 0;
+
+			@media (min-width: 768px) and (max-width: 1300px) {
+				font-size: vw(40);
+			}
 
 			@include mq(sm2) {
 				font-size: vw2(36);
@@ -821,6 +829,10 @@
 			}
 			.fs24 {
 				font-size: 24px;
+
+				@media (min-width: 768px) and (max-width: 1300px) {
+					font-size: vw(37);
+				}
 
 				@include mq(sm2) {
 					font-size: vw2(28.8);
@@ -851,12 +863,18 @@
 				justify-content: center;
 				align-items: center;
 
+				@media (min-width: 768px) and (max-width: 1300px) {
+					font-size: vw(30);
+				}
 				@include mq(sm2) {
 					font-size: vw2(27);
 					margin-bottom: 10px;
 				}
 			}
 			.unit {
+				@media (min-width: 768px) and (max-width: 1300px) {
+					font-size: vw(28);
+				}
 				@include mq(sm2) {
 					font-size: vw2(24);
 				}
@@ -877,7 +895,9 @@
 					}
 					small {
 						font-size: 17px;
-
+						@media (min-width: 768px) and (max-width: 1300px) {
+							font-size: vw(26);
+						}
 						@include mq(sm2) {
 							font-size: vw2(23);
 						}

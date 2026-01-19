@@ -4586,27 +4586,29 @@ body .slick-dots {
 .foot-btn {
   background: url(../images/foot-btn-bg.jpg) no-repeat center/cover;
   text-align: center;
-  padding: 36px 20px;
   line-height: 1.9;
   position: sticky;
   width: 100%;
   left: 0;
   bottom: 0;
-  border-top: 5px solid #fff; }
-  @media screen and (max-width: 767px) {
-    .foot-btn {
-      padding: 16px 0;
-      border-top: 3px solid #fff; } }
+  z-index: 5;
+  padding: 8px; }
+  .foot-btn-inner {
+    border: 2px solid #fff;
+    padding: 5px 20px 17px; }
+    @media screen and (max-width: 767px) {
+      .foot-btn-inner {
+        padding: 3px 0 8px; } }
   .foot-btn__txt {
     font-size: 28px; }
     @media screen and (max-width: 767px) {
       .foot-btn__txt {
         font-size: 4.30769vw; } }
   .foot-btn__btn {
-    font-size: 40px; }
+    font-size: 32px; }
     @media screen and (max-width: 767px) {
       .foot-btn__btn {
-        font-size: 6.15385vw; } }
+        font-size: 4.92308vw; } }
     .foot-btn__btn a {
       background: #fff;
       border-radius: 20px;
@@ -4614,13 +4616,13 @@ body .slick-dots {
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      width: 640px;
-      height: 70px; }
+      width: 518px;
+      height: 56px; }
       @media screen and (max-width: 767px) {
         .foot-btn__btn a {
           border-radius: 10px;
-          width: 84.46154vw;
-          height: 10.76923vw; } }
+          width: 79.69231vw;
+          height: 8.61538vw; } }
 
 .sidebar-search {
   padding: 20px 0 40px;
@@ -4692,12 +4694,12 @@ body .slick-dots {
   background: url(../images/kv-bg.jpg) no-repeat center/cover;
   width: 100%;
   height: auto;
-  aspect-ratio: 2881 / 2735;
+  aspect-ratio: 2881 / 2855;
   position: relative; }
   @media screen and (max-width: 767px) {
     .arena-kv {
       background: url(../images/sp/kv-bg.jpg) no-repeat center/cover;
-      aspect-ratio: 650/828; } }
+      aspect-ratio: 650/799; } }
   .arena-kv__catch {
     width: 100%;
     max-width: 1336px;
@@ -5275,6 +5277,9 @@ body .slick-dots {
     gap: 30px; }
   .arena-schedule__item {
     width: calc((100% - 60px) / 3); }
+    @media (min-width: 768px) and (max-width: 1300px) {
+      .arena-schedule__item {
+        width: calc((100% - 30px) / 2); } }
     @media screen and (max-width: 767px) {
       .arena-schedule__item {
         width: 100%; } }
@@ -5292,6 +5297,9 @@ body .slick-dots {
       font-size: 28px;
       line-height: 1.21;
       letter-spacing: 0; }
+      @media (min-width: 768px) and (max-width: 1300px) {
+        .arena-schedule__item-header {
+          font-size: 2.5vw; } }
       @media screen and (max-width: 767px) {
         .arena-schedule__item-header {
           font-size: 5.53846vw;
@@ -5313,6 +5321,9 @@ body .slick-dots {
         transform: scale(0.9, 1); }
       .arena-schedule__item-header .fs24 {
         font-size: 24px; }
+        @media (min-width: 768px) and (max-width: 1300px) {
+          .arena-schedule__item-header .fs24 {
+            font-size: 2.3125vw; } }
         @media screen and (max-width: 767px) {
           .arena-schedule__item-header .fs24 {
             font-size: 4.43077vw; } }
@@ -5334,10 +5345,16 @@ body .slick-dots {
       flex-direction: column;
       justify-content: center;
       align-items: center; }
+      @media (min-width: 768px) and (max-width: 1300px) {
+        .arena-schedule__item-cont .ttl {
+          font-size: 1.875vw; } }
       @media screen and (max-width: 767px) {
         .arena-schedule__item-cont .ttl {
           font-size: 4.15385vw;
           margin-bottom: 10px; } }
+    @media (min-width: 768px) and (max-width: 1300px) {
+      .arena-schedule__item-cont .unit {
+        font-size: 1.75vw; } }
     @media screen and (max-width: 767px) {
       .arena-schedule__item-cont .unit {
         font-size: 3.69231vw; } }
@@ -5355,6 +5372,9 @@ body .slick-dots {
         text-align: center; }
       .arena-schedule__item-cont .unit .body small {
         font-size: 17px; }
+        @media (min-width: 768px) and (max-width: 1300px) {
+          .arena-schedule__item-cont .unit .body small {
+            font-size: 1.625vw; } }
         @media screen and (max-width: 767px) {
           .arena-schedule__item-cont .unit .body small {
             font-size: 3.53846vw; } }
