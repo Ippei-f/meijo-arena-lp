@@ -461,13 +461,10 @@
 			.body {
 				width: 100%;
 				line-height: 1.56;
+				font-size: 24px;
 
 				@include mq(sm2) {
 					font-size: vw2(20);
-				}
-
-				.fs-32 {
-					font-size: 32px;
 				}
 			}
 		}
@@ -505,13 +502,15 @@
 				}
 			}
 		}
-		&.item-2 {
-			margin-top: 160px;
+		&.item-1 {
+			display: block;
+			margin-bottom: 30px;
 
-			@include mq(sm2) {
-				margin-top: 0;
+			.img {
+				text-align: center;
 			}
-
+		}
+		&.item-2 {
 			.txt {
 				@include mq(sm2) {
 					margin-bottom: 50px;
@@ -651,8 +650,12 @@
 	}
 	&__note {
 		font-size: 22px;
+		max-width: calc(100% - 340px);
+		margin: 0 auto;
+		line-height: 1.7;
 		@include mq(sm2) {
 			font-size: vw2(22);
+			max-width: 100%;
 		}
 	}
 }
@@ -927,13 +930,19 @@
 		.abillust {
 			position: absolute;
 			width: 173px;
-			right: 40px;
-			top: -400px;
+			//right: 40px;
+			//top: -400px;
+
+			right: -20px;
+			top: -270px;
 
 			@include mq(sm2) {
 				width: vw2(110);
-				right: 20px;
-				top: -120px;
+				//right: 20px;
+				//top: -120px;
+
+				right: 0px;
+				top: -100px;
 			}
 		}
 	}
