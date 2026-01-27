@@ -2,10 +2,10 @@
 
 .l-footer {
 	text-align: center;
-	padding-bottom: 150px;
+	padding-bottom: 180px;
 
 	@include mq(sm2) {
-		padding-bottom: 40px;
+		padding-bottom: 120px;
 	}
 
 	&__logo {
@@ -118,14 +118,16 @@
 	background: url(../images/foot-btn-bg.jpg) no-repeat center / cover;
 	text-align: center;
 	line-height: 1.9;
-	position: sticky;
+	position: fixed;
 	width: 100%;
-	left: 0;
+	right: 0;
 	bottom: 0;
 	z-index: 5;
 	padding: 8px;
+	width: 650px;
 
 	@include mq(sm2) {
+		width: 100%;
 	}
 
 	&-inner {

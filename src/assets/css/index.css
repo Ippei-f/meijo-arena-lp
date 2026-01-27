@@ -4514,10 +4514,10 @@ body .slick-dots {
 
 .l-footer {
   text-align: center;
-  padding-bottom: 150px; }
+  padding-bottom: 180px; }
   @media screen and (max-width: 767px) {
     .l-footer {
-      padding-bottom: 40px; } }
+      padding-bottom: 120px; } }
   .l-footer__logo {
     margin-bottom: 20px; }
     .l-footer__logo img {
@@ -4587,12 +4587,16 @@ body .slick-dots {
   background: url(../images/foot-btn-bg.jpg) no-repeat center/cover;
   text-align: center;
   line-height: 1.9;
-  position: sticky;
+  position: fixed;
   width: 100%;
-  left: 0;
+  right: 0;
   bottom: 0;
   z-index: 5;
-  padding: 8px; }
+  padding: 8px;
+  width: 650px; }
+  @media screen and (max-width: 767px) {
+    .foot-btn {
+      width: 100%; } }
   .foot-btn-inner {
     border: 2px solid #fff;
     padding: 5px 20px 17px; }
