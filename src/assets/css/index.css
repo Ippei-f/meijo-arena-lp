@@ -4589,14 +4589,16 @@ body .slick-dots {
   line-height: 1.9;
   position: fixed;
   width: 100%;
-  right: 0;
-  bottom: 0;
+  right: 10px;
+  bottom: 10px;
   z-index: 5;
   padding: 8px;
-  width: 650px; }
+  width: 450px; }
   @media screen and (max-width: 767px) {
     .foot-btn {
-      width: 100%; } }
+      width: 100%;
+      right: 0;
+      bottom: 0; } }
   .foot-btn-inner {
     border: 2px solid #fff;
     padding: 5px 20px 17px; }
@@ -4604,24 +4606,24 @@ body .slick-dots {
       .foot-btn-inner {
         padding: 3px 0 8px; } }
   .foot-btn__txt {
-    font-size: 28px; }
+    font-size: 20px; }
     @media screen and (max-width: 767px) {
       .foot-btn__txt {
         font-size: 4.30769vw; } }
   .foot-btn__btn {
-    font-size: 32px; }
+    font-size: 22px; }
     @media screen and (max-width: 767px) {
       .foot-btn__btn {
         font-size: 4.92308vw; } }
     .foot-btn__btn a {
       background: #fff;
-      border-radius: 20px;
+      border-radius: 10px;
       box-shadow: 4px 2px 4px #ff931e;
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      width: 518px;
-      height: 56px; }
+      width: 340px;
+      height: 43px; }
       @media screen and (max-width: 767px) {
         .foot-btn__btn a {
           border-radius: 10px;
