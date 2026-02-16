@@ -663,7 +663,7 @@
 /* --------------------------- */
 
 .arena-schedule {
-	padding: 160px 4vw;
+	padding: 160px 4vw 100px;
 
 	@include mq(sm2) {
 		padding: 60px 4vw;
@@ -913,6 +913,26 @@
 
 /* --------------------------- */
 
+.bnr-detail {
+	text-align: center;
+
+	@include mq(sm2) {
+		padding: 0 $sp-padding;
+	}
+
+	img {
+		width: 620px;
+	}
+
+	&.big {
+		img {
+			width: 800px;
+		}
+	}
+}
+
+/* --------------------------- */
+
 .arena-kidsevent {
 	padding: 110px 4vw;
 	background: #ffd900;
@@ -1043,7 +1063,7 @@
 			@include mq(sm2) {
 				width: vw2(105);
 				left: 20px;
-				top: -150px;
+				top: -70px;
 			}
 		}
 	}

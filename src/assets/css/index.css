@@ -5199,7 +5199,7 @@ body .slick-dots {
 
 /* --------------------------- */
 .arena-schedule {
-  padding: 160px 4vw; }
+  padding: 160px 4vw 100px; }
   @media screen and (max-width: 767px) {
     .arena-schedule {
       padding: 60px 4vw; } }
@@ -5389,6 +5389,17 @@ body .slick-dots {
             font-size: 3.53846vw; } }
 
 /* --------------------------- */
+.bnr-detail {
+  text-align: center; }
+  @media screen and (max-width: 767px) {
+    .bnr-detail {
+      padding: 0 20px; } }
+  .bnr-detail img {
+    width: 620px; }
+  .bnr-detail.big img {
+    width: 800px; }
+
+/* --------------------------- */
 .arena-kidsevent {
   padding: 110px 4vw;
   background: #ffd900;
@@ -5478,7 +5489,7 @@ body .slick-dots {
         .arena-kitchencar-inner .abillust {
           width: 16.15385vw;
           left: 20px;
-          top: -150px; } }
+          top: -70px; } }
   .arena-kitchencar__img {
     position: relative; }
     .arena-kitchencar__img img.img {
